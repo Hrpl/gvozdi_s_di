@@ -15,19 +15,19 @@
     </style>
 </head>
 <body>
-    <!-- Главный блок -->
     <section class="hero">
-        <div class="container">
-            <div class="bg-main-img">
-                <div class="row align-items-center">
-                    <div class="col-md-8">
-                        <p class="hero-title redmark-font">Диана Таранова</p>
-                        <p class="hero-subtitle fade-in">Мастер гвоздестояния и звукотерапевт</p>
-                        <p class="hero-quote redmark-font fade-in">"Здесь ты услышишь истинного себя"</p>
-                    </div>
+        <div class="top-gradient">
+                <div class="hero-content">
+                    <span class="redmark-font hero-title fade-in">Диана Таранова</span>
+                    
                 </div>
-            </div>
         </div>
+        <div class="bg-main-img">
+            <p class="hero-subtitle fade-in">мастер гвоздестояния и звукотерапевт</p>
+            <!-- Фоновая картинка -->
+            <div class="image-overlay"></div>
+        </div>
+        <span class="citat">- здесь ты услышишь истинного себя</span>
     </section>
 
     <!-- Блок "Со мной" -->
@@ -75,7 +75,6 @@
                                 Парная практика: 6 000 ₽ с человека | 4 часа<br>
                                 Групповая практика: 3 500 ₽ с человека | 2-3 человека
                             </p>
-                            <h4>Описание:</h4>
                             <div class="row">
                                 <div class="col-md-6 benefits-column">
                                     <h5>Физическая польза:</h5>
@@ -131,7 +130,6 @@
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#practicesAccordion">
                         <div class="accordion-body">
                             <p class="practice-price">3 500 ₽ | 1 час</p>
-                            <h4>Описание:</h4>
                             <p>Чаши ставятся на тело, мастер извлекает вибрационно-звуковые колебания резонаторами.</p>
                             <div class="row">
                                 <div class="col-md-6 benefits-column">
@@ -172,8 +170,91 @@
                     </div>
                 </div>
                 
-                <!-- Остальные практики по аналогии -->
+                <div class="accordion-item mb-4 fade-in">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Вибрационные ванны тибетскими чашами 
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#practicesAccordion">
+                        <div class="accordion-body">
+                            <p class="practice-price">3 500 ₽ | 1 час</p>
+                            <p>Чаши размещаются вокруг тела по меридианам, создавая вибрационное поле.</p>
+                            <div class="row">
+                                <div class="col-md-6 benefits-column">
+                                    <h5>Физическая польза:</h5>
+                                    <ul>
+                                        <li>снятие мышечного напряжения</li>
+                                        <li>улучшение кровообращения и лимфотока</li>
+                                        <li>нормализация давления</li>
+                                        <li>облегчение боли</li>
+                                        <li>улучшение работы внутренних органов</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 benefits-column">
+                                    <h5>Психоэмоциональная польза:</h5>
+                                    <ul>
+                                        <li>снятие стресса</li>
+                                        <li>улучшение настроения</li>
+                                        <li>глубокое расслабление</li>
+                                        <li>стрессоустойчивость</li>
+                                        <li>улучшение сна</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-gold mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Контактный массаж тибетскими чашами">Записаться</button>
+                        </div>
+                    </div>
+                </div>
                 
+                <div class="accordion-item mb-4 fade-in">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Sound healing 
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#practicesAccordion">
+                        <div class="accordion-body">
+                            <p class="practice-price">Индивидуальный: 15 000 ₽ | 1 час</p>
+                            <p class="practice-price">Парный: 10 000 ₽ | 1 час</p>
+                            <p class="practice-price">Групповой: 1 500 ₽ | 1 час</p>
+                            <p class="practice-price">Выездной: 20 000 ₽ | 1 час</p>
+                            <!-- <p>Чаши размещаются вокруг тела по меридианам, создавая вибрационное поле.</p> -->
+                            <div class="row">
+                                <div class="col-md-6 benefits-column">
+                                    <h5>Физическая польза:</h5>
+                                    <ul>
+                                        <li>расслабление мышц</li>
+                                        <li>улучшение сна</li>
+                                        <li>восстановление организма</li>
+                                        <li>снятие напряжения</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 benefits-column">
+                                    <h5>Психоэмоциональная польза:</h5>
+                                    <ul>
+                                        <li>снятие стресса</li>
+                                        <li>эмоциональная гармонизация</li>
+                                        <li>улучшение настроения</li>
+                                        <li>концентрация</li>
+                                        <li>осознанность</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 benefits-column">
+                                    <h5>Как это работает:</h5>
+                                    <ul>
+                                        <li>резонанс с тканями и органами</li>
+                                        <li>синхронизация с мозговыми ритмами</li>
+                                        <li>активация парасимпатической системыа</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-gold mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Контактный массаж тибетскими чашами">Записаться</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -200,7 +281,6 @@
             <div class="row justify-content-center"> <!-- Добавлен justify-content-center -->
                 <div class="col-md-8 col-lg-6"> <!-- Уменьшена ширина колонки -->
                     <div class="text-center fade-in"> <!-- Добавлен text-center -->
-                        <h3>Свяжитесь со мной</h3>
                         <div class="social-links mt-4 justify-content-center"> <!-- Добавлен justify-content-center -->
                             <a href="https://t.me/gvozdi_s_di" target="_blank">Telegram</a>
                             <a href="https://www.instagram.com/gvozdi_s_di?igsh=MTczNW1kbzg5andzOA==" target="_blank">Instagram</a>
@@ -216,28 +296,18 @@
         </div>
     </section>
 
-    <!-- Модальное окно для записи -->
+    
+
     <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="bookingModalLabel">Запись на практику</h5>
+                    <h5 class="modal-title" id="bookingModalLabel">Записаться на приём</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <!-- <div class="modal-body">
-                    <p>Для записи на <span id="serviceName"></span> свяжитесь со мной через Telegram:</p>
-                    <a href="https://t.me/dianataranova" class="btn btn-gold w-100" target="_blank">Написать в Telegram</a>
-                    <p class="mt-3 text-center">Или оставьте свои контакты:</p>
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Ваше имя" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="tel" class="form-control" placeholder="Ваш телефон" required>
-                        </div>
-                        <button type="submit" class="btn btn-gold w-100">Отправить заявку</button>
-                    </form>
-                </div> -->
+                <div class="modal-body">
+                    <a href="https://t.me/gvozdi_s_di" class="btn btn-gold w-100" target="_blank">Написать в Telegram</a>
+                </div>
             </div>
         </div>
     </div>
@@ -252,7 +322,7 @@
                 </div>
                 <div class="modal-body">
                     <p>Для оформления подарочного сертификата свяжитесь со мной через Telegram:</p>
-                    <a href="https://t.me/dianataranova" class="btn btn-gold w-100" target="_blank">Написать в Telegram</a>
+                    <a href="https://t.me/gvozdi_s_di" class="btn btn-gold w-100" target="_blank">Написать в Telegram</a>
                     <!-- <p class="mt-3 text-center">Или оставьте заявку:</p> -->
                     <!-- <form>
                         <div class="mb-3">

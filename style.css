@@ -1,7 +1,20 @@
 /* Кастомные стили */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
 
-:root {
+@font-face {
+  font-family: 'RR'; /* Название, которое вы будете использовать */
+  src: url('./fonts/VP-Creative-Shop-Redmark-Regular.otf') format('opentype'); /* Путь к файлу шрифта */
+  font-weight: normal; /* Толщина шрифта */
+  font-style: normal;  /* Стиль шрифта (курсив и т.д.) */
+}
+
+@font-face {
+  font-family: 'AT'; /* Название, которое вы будете использовать */
+  src: url('fonts/ArsenicaTrial-Light.ttf') format('truetype'); /* Путь к файлу шрифта */
+}
+
+        :root {
             --ivory: #f8f4e9;
             --powder: #e8dcd1;
             --gold: #d4af37;
@@ -16,7 +29,7 @@
         }
         
         .redmark-font {
-            font-family: 'CORMORANT';
+            font-family: "AT", serif;
         }
         
         h1, h2, h3, h4, h5 {
@@ -32,60 +45,75 @@
         .hero {
             position: relative;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+
+            background-color: white;
+        }
+
+        .top-gradient {
+            height: 20vh;
+            background: black;
+            display: flex;
+            align-items: flex-end; /* Текст внизу блока */
+            padding-bottom: 30px; /* Отступ от низа */
+            z-index: 3;
+            position: relative;
         }
 
         .bg-main-img {
-            background-image: url(./img/glaza_i_gvozdi.heic);
+            background-image: url(./img/budda.webp);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            position: absolute;
-            top: 0;
-            left: 0;
+            height: 80vh;
             width: 100%;
-            height: 100%;
+            position: relative;
             z-index: 1;
+            margin-top: -10px; /* Наложение на градиент */
         }
 
-        .bg-main-img::before {
-            content: '';
+        .image-overlay {
             position: absolute;
-            top: 0;
+            top: -20px; /* Перекрываем градиент */
             left: 0;
             width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, 
-                rgba(248, 244, 233, 0.9) 0%, 
-                rgba(232, 220, 209, 0.8) 50%,
-                rgba(212, 175, 55, 0.3) 100%);
+            height: calc(100% + 20px); /* Компенсируем наложение */
+            background: linear-gradient(to bottom, 
+                rgba(0, 0, 0, 0.3) 0%,
+                rgba(0, 0, 0, 0.1) 10%,
+                transparent 30%);
             z-index: 2;
         }
 
-        .bg-main-img .row {
-            position: relative;
-            z-index: 3;
+        .hero-content {
+            width: 100%;
+            padding-top: 10vh;
+            padding-left: 2vh;
+            text-align: start;
+            align-self: start;
         }
 
         .hero-title {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            color: var(--dark-text);
+            font-weight: 600;
+            color: var(--ivory);
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
-            color: var(--gold);
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-quote {
-            font-size: 2rem;
-            color: var(--dark-text);
+            color: var(--ivory);
+            margin-bottom: 0;
+            font-size: 1.2rem;
             opacity: 0.9;
         }
+
+        .citat {
+            margin-left: 2rem;
+            font-size: 1.3rem;
+        }
+
         /* Блок "Со мной" */
         .about {
             background-color: white;
@@ -278,17 +306,21 @@
         
         /* Адаптация для мобильных */
         @media (max-width: 768px) {
+            .top-gradient {
+                height: 20vh; /* Немного больше на мобильных */
+            }
+            
+            .bg-main-img {
+                height: 82vh;
+            }
+            
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 3.1rem;
             }
             
-            .hero-quote {
-                font-size: 1.5rem;
-            }
-            
-            .bg-main-img::before {
-                background: linear-gradient(135deg, 
-                    rgba(248, 244, 233, 0.95) 0%, 
-                    rgba(232, 220, 209, 0.85) 100%);
+            .hero-subtitle {
+                font-size: 1rem;
+                margin-left: 2vh;
+                margin-top: 10px;
             }
         }
