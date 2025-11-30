@@ -1,0 +1,294 @@
+/* Кастомные стили */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+            --ivory: #f8f4e9;
+            --powder: #e8dcd1;
+            --gold: #d4af37;
+            --dark-text: #3a2c1e;
+        }
+        
+        body {
+            font-family: 'Century Gothic', sans-serif;
+            color: var(--dark-text);
+            background-color: var(--ivory);
+            line-height: 1.7;
+        }
+        
+        .redmark-font {
+            font-family: 'CORMORANT';
+        }
+        
+        h1, h2, h3, h4, h5 {
+            color: var(--dark-text);
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        /* Главный блок */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .bg-main-img {
+            background-image: url(./img/glaza_i_gvozdi.heic);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .bg-main-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(248, 244, 233, 0.9) 0%, 
+                rgba(232, 220, 209, 0.8) 50%,
+                rgba(212, 175, 55, 0.3) 100%);
+            z-index: 2;
+        }
+
+        .bg-main-img .row {
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-quote {
+            font-size: 2rem;
+            color: var(--dark-text);
+            opacity: 0.9;
+        }
+        /* Блок "Со мной" */
+        .about {
+            background-color: white;
+        }
+        
+        .about-img {
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: transform 0.5s ease;
+        }
+        
+        .about-img:hover {
+            transform: scale(1.02);
+        }
+        
+        .about-title {
+            color: var(--gold);
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .about-list {
+        list-style-type: none;
+        padding-left: 0;
+        }
+
+    .about-list li {
+        margin-bottom: 0.8rem;
+        position: relative;
+        padding-left: 25px;
+        display: flex;
+        align-items: center;
+        min-height: 24px; /* Добавляем минимальную высоту для выравнивания */
+    }
+
+    .about-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--gold);
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+        
+        /* Практики и цены */
+        .practices {
+            background-color: var(--powder);
+        }
+        
+        .accordion-button {
+            background-color: white;
+            color: var(--dark-text);
+            font-weight: bold;
+            padding: 1.5rem;
+            border: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: white;
+            color: var(--gold);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+            border-color: var(--gold);
+        }
+        
+        .accordion-body {
+            padding: 2rem;
+            background-color: white;
+        }
+        
+        .practice-price {
+            color: var(--gold);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .hr-bottom {
+            color: var(--powder);
+        }
+
+        .benefits-column {
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefits-column h5 {
+            color: var(--gold);
+            border-bottom: 1px solid var(--powder);
+            padding-bottom: 0.5rem;
+        }
+        
+        .benefits-column ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .benefits-column li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .benefits-column li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+        
+        /* Кнопки */
+        .btn-gold {
+            background-color: var(--gold);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gold:hover {
+            background-color: #c19b2c;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            color: white;
+        }
+        
+        /* Сертификаты */
+        .certificates {
+            background-color: white;
+            text-align: center;
+        }
+        
+        .certificate-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Контакты */
+        .contacts {
+            background-color: var(--powder);
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            padding: 10px 25px;
+            background-color: white;
+            color: var(--dark-text);
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--gold);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .map-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        .map-link:hover {
+            color: #c19b2c;
+            text-decoration: underline;
+        }
+        
+        /* Анимации */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Адаптация для мобильных */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-quote {
+                font-size: 1.5rem;
+            }
+            
+            .bg-main-img::before {
+                background: linear-gradient(135deg, 
+                    rgba(248, 244, 233, 0.95) 0%, 
+                    rgba(232, 220, 209, 0.85) 100%);
+            }
+        }
