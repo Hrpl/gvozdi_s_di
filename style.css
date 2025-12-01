@@ -2,27 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
 @media (max-width: 768px) {
-@font-face {
-  font-family: 'RR'; /* Название, которое вы будете использовать */
-  src: url('./fonts/VP-Creative-Shop-Redmark-Regular.otf') format('opentype'); /* Путь к файлу шрифта */
-  font-weight: normal; /* Толщина шрифта */
-  font-style: normal;  /* Стиль шрифта (курсив и т.д.) */
-}
+    @font-face {
+    font-family: 'RR'; /* Название, которое вы будете использовать */
+    src: url('./fonts/VP-Creative-Shop-Redmark-Regular.otf') format('opentype'); /* Путь к файлу шрифта */
+    font-weight: normal; /* Толщина шрифта */
+    font-style: normal;  /* Стиль шрифта (курсив и т.д.) */
+    }
 
-@font-face {
-  font-family: 'AT'; /* Название, которое вы будете использовать */
-  src: url('fonts/ArsenicaTrial-Light.ttf') format('truetype'); /* Путь к файлу шрифта */
-}
+    @font-face {
+    font-family: 'AT'; /* Название, которое вы будете использовать */
+    src: url('fonts/ArsenicaTrial-Light.ttf') format('truetype'); /* Путь к файлу шрифта */
+    }
 
-@font-face {
-  font-family: 'Century Gothic'; /* Название, которое вы будете использовать */
-  src: url('fonts/centurygothic.ttf') format('truetype'); /* Путь к файлу шрифта */
-}
+    @font-face {
+    font-family: 'Century Gothic'; /* Название, которое вы будете использовать */
+    src: url('fonts/centurygothic.ttf') format('truetype'); /* Путь к файлу шрифта */
+    }
 
-@font-face {
-  font-family: 'Alc'; /* Название, которое вы будете использовать */
-  src: url('fonts/3597-font.ttf') format('truetype'); /* Путь к файлу шрифта */
-}
+    @font-face {
+    font-family: 'Alc'; /* Название, которое вы будете использовать */
+    src: url('fonts/3597-font.ttf') format('truetype'); /* Путь к файлу шрифта */
+    }
 
         :root {
             --ivory: #f8f4e9;
@@ -380,13 +380,13 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-
+            width: 100%;
             font-size: 1.1rem;
             font-family: "AT";
             /* Важно: делаем кнопку ресайзабельной */
-            height: 20vh; /* Заменил vh на px */
-            width: 31vw; /* Заменил vh на px */
-            width: auto; /* Ширина по содержимому */
+            min-height: 20vh; /* Заменил vh на px */
+            min-width: 31vw; /* Заменил vh на px */
+            
         }
         
         .btn-gold:hover {
@@ -454,6 +454,8 @@
             width: 8px;
             height: 8px;
         }
+
+
     }
     
             @media (max-width: 400px) {
@@ -464,5 +466,166 @@
                 .carousel-caption {
                     display: none; /* Скрываем подписи на очень маленьких экранах */
                 }
+            }
+
+
+                        /* Стили для блока практик */
+            .practice-links {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            .practice-link {
+                display: block;
+                padding: 12px 20px;
+                background-color: #f8f9fa;
+                border: 2px solid #e9ecef;
+                border-radius: 8px;
+                color: #333;
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                position: relative;
+            }
+
+            .practice-link:hover {
+                background-color: #e9ecef;
+                border-color: #d0d7de;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+
+            .practice-link.active {
+                background-color: #d4af37; /* Золотой цвет */
+                border-color: #b8941f;
+                color: white;
+                box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+            }
+
+            .practice-link.active::after {
+                content: '';
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 8px;
+                height: 8px;
+                background-color: white;
+                border-radius: 50%;
+            }
+
+            .practice-content {
+                min-height: 200px;
+            }
+
+            .practice-text {
+                transition: opacity 0.3s ease;
+            }
+
+            .practice-text.show {
+                display: block !important;
+                animation: fadeIn 0.5s ease;
+            }
+
+            .short-text p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+                color: #555;
+                margin-bottom: 15px;
+            }
+
+            .full-text {
+                padding: 20px 0;
+                border-top: 1px solid #eee;
+                margin-top: 15px;
+            }
+
+            .full-text h5 {
+                color: #d4af37;
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
+
+            .full-text p {
+                margin-bottom: 15px;
+                line-height: 1.7;
+            }
+
+            .full-text ul, 
+            .full-text ol {
+                margin-bottom: 20px;
+                padding-left: 20px;
+            }
+
+            .full-text li {
+                margin-bottom: 8px;
+                line-height: 1.6;
+            }
+
+            .full-text strong {
+                color: #333;
+                font-weight: 600;
+            }
+
+            .btn-more,
+            .btn-less {
+                padding: 6px 20px;
+                font-size: 0.9rem;
+                border-width: 1px;
+            }
+
+            .btn-outline-gold {
+                color: #d4af37;
+                border-color: #d4af37;
+                background-color: transparent;
+            }
+
+            .btn-outline-gold:hover {
+                background-color: #d4af37;
+                color: white;
+                border-color: #d4af37;
+            }
+
+
+           
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Адаптивность для мобильных */
+            @media (max-width: 768px) {
+                .practice-links {
+                    gap: 8px;
+                }
+                
+                .practice-link {
+                    padding: 10px 15px;
+                    font-size: 0.95rem;
+                }
+                
+                .full-text {
+                    padding: 15px 0;
+                }
+                
+                .full-text h5 {
+                    font-size: 1.1rem;
+                }
+                
+                .full-text ul,
+                .full-text ol {
+                    padding-left: 15px;
+                }
+                
             }
         }
