@@ -1,0 +1,246 @@
+/* Кастомные стили для Bootstrap карусели */
+.custom-bs-carousel {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    background-color: #f8f9fa;
+}
+
+/* Контейнер для карусели */
+.carousel-inner {
+    height: 550px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+/* Стили для изображений в карусели */
+.custom-bs-carousel .carousel-item img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    padding: 20px;
+    display: block;
+}
+
+/* Подписи */
+.custom-bs-carousel .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px 16px;
+    border-radius: 4px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 80%;
+}
+
+.custom-bs-carousel .carousel-caption p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: white;
+}
+
+/* Индикаторы (точки) */
+.custom-bs-carousel .carousel-indicators {
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.custom-bs-carousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+.custom-bs-carousel .carousel-indicators button.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+/* Кнопки навигации */
+.custom-bs-carousel .carousel-control-prev,
+.custom-bs-carousel .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.custom-bs-carousel .carousel-control-prev {
+    left: 20px;
+}
+
+.custom-bs-carousel .carousel-control-next {
+    right: 20px;
+}
+
+.custom-bs-carousel .carousel-control-prev:hover,
+.custom-bs-carousel .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.custom-bs-carousel .carousel-control-prev-icon,
+.custom-bs-carousel .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+}
+
+/* Анимация перехода */
+.custom-bs-carousel .carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 992px) {
+    .custom-bs-carousel {
+        max-width: 95%;
+    }
+    
+    .carousel-inner {
+        height: 450px;
+    }
+    
+    .custom-bs-carousel .carousel-control-prev,
+    .custom-bs-carousel .carousel-control-next {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .custom-bs-carousel .carousel-control-prev {
+        left: 15px;
+    }
+    
+    .custom-bs-carousel .carousel-control-next {
+        right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-inner {
+        height: 400px;
+    }
+    
+    .custom-bs-carousel .carousel-item img {
+        padding: 15px;
+    }
+    
+    .custom-bs-carousel .carousel-control-prev,
+    .custom-bs-carousel .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .custom-bs-carousel .carousel-control-prev-icon,
+    .custom-bs-carousel .carousel-control-next-icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .custom-bs-carousel .carousel-indicators {
+        margin-bottom: 5px;
+        padding: 8px 0;
+    }
+    
+    .custom-bs-carousel .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-inner {
+        height: 350px;
+    }
+    
+    .custom-bs-carousel .carousel-item img {
+        padding: 10px;
+    }
+    
+    .custom-bs-carousel .carousel-control-prev,
+    .custom-bs-carousel .carousel-control-next {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .custom-bs-carousel .carousel-control-prev {
+        left: 10px;
+    }
+    
+    .custom-bs-carousel .carousel-control-next {
+        right: 10px;
+    }
+    
+    .custom-bs-carousel .carousel-control-prev-icon,
+    .custom-bs-carousel .carousel-control-next-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Скрываем подписи на мобильных */
+    .custom-bs-carousel .carousel-caption {
+        display: none !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .carousel-inner {
+        height: 300px;
+    }
+    
+    .custom-bs-carousel .carousel-control-prev,
+    .custom-bs-carousel .carousel-control-next {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Дополнительные эффекты */
+.custom-bs-carousel .carousel-item.active {
+    animation: slideFade 0.5s ease-out;
+}
+
+@keyframes slideFade {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Скрываем кнопки на очень маленьких экранах */
+@media (max-width: 350px) {
+    .custom-bs-carousel .carousel-control-prev,
+    .custom-bs-carousel .carousel-control-next {
+        display: none;
+    }
+    
+    .custom-bs-carousel .carousel-indicators {
+        position: static;
+        margin-top: 10px;
+        background-color: transparent;
+        padding: 0;
+    }
+}

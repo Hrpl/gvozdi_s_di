@@ -1,7 +1,7 @@
 /* Кастомные стили */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
-
+@media (max-width: 768px) {
 @font-face {
   font-family: 'RR'; /* Название, которое вы будете использовать */
   src: url('./fonts/VP-Creative-Shop-Redmark-Regular.otf') format('opentype'); /* Путь к файлу шрифта */
@@ -92,6 +92,20 @@
             margin-top: -10px; /* Наложение на градиент */
         }
 
+        .logo-img {
+            background-image: url(./img/logo.webp);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 10vh;
+            width: 10vh;
+            position: relative;
+            z-index: 3;
+            flex-shrink: 0; /* Запрещаем сжатие логотипа */
+            margin-bottom: 1rem; /* Выравниваем с заголовком по вертикали */
+            margin-right: 1rem;
+        }
+
         .image-overlay {
             position: absolute;
             top: -20px; /* Перекрываем градиент */
@@ -111,6 +125,9 @@
             padding-left: 2vh;
             text-align: start;
             align-self: start;
+            display: flex; /* Добавляем flex-контейнер */
+            align-items: flex-end; /* Выравниваем элементы по нижнему краю */
+            justify-content: space-between; /* Распределяем пространство между элементами */
         }
 
         .hero-title {
@@ -118,6 +135,7 @@
             color: var(--ivory);
             font-size: 2.25rem;
             margin-bottom: 0.5rem;
+            margin-right: 2rem; /* Отступ между заголовком и лого */
         }
 
         .hero-subtitle {
@@ -128,10 +146,26 @@
         }
 
         .citat {
-            font-family: 'AT';
             font-weight: 500;
+            margin-top: 1rem;
             margin-left: 0.5rem;
+            font-size: 1rem;
+            display: block; /* Делаем блочным элементом для центрирования */
+            margin-left: auto; /* Автоматические отступы для центрирования */
+            margin-right: auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .accent-citat {
+            font-family: 'AT';
+            font-weight: 600;
+            text-align: center; /* Центрируем текст */
+            display: block; /* Делаем блочным элементом */
+            margin-left: auto;
+            margin-right: auto;
             font-size: 1.1rem;
+            margin-top: 1.5rem; /* Отступ сверху */
         }
 
         /* Блок "Со мной" */
@@ -270,9 +304,12 @@
             color: var(--gold);
         }
 
+        /* Дипломы */
+
+
         /* Сертификаты */
         .certificates {
-            background-color: white;
+            background-color: var(--powder);
             text-align: center;
         }
         
@@ -288,7 +325,7 @@
 
         /* Контакты */
         .contacts {
-            background-color: var(--powder);
+            background-color: white;
             overflow-wrap: break-word;
         }
         
@@ -378,7 +415,7 @@
         
 
         /* Адаптация для мобильных */
-        @media (max-width: 768px) {
+        
             .top-gradient {
                 height: 20vh; /* Немного больше на мобильных */
             }
@@ -396,5 +433,36 @@
                 font-size: 1rem;
                 margin-left: 2vh;
                 margin-top: 10px;
+            }
+             @media (max-width: 576px) {
+        .carousel-item img {
+            height: 250px;
+            padding: 10px;
+        }
+        
+        .carousel-caption {
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            bottom: 10px;
+        }
+        
+        .carousel-caption p {
+            font-size: 0.75rem;
+        }
+        
+        .carousel-indicators button {
+            width: 8px;
+            height: 8px;
+        }
+    }
+    
+            @media (max-width: 400px) {
+                .carousel-item img {
+                    height: 220px;
+                }
+                
+                .carousel-caption {
+                    display: none; /* Скрываем подписи на очень маленьких экранах */
+                }
             }
         }
