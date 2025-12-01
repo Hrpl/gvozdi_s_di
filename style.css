@@ -249,25 +249,7 @@
             left: 0;
             color: var(--gold);
         }
-        
-        /* Кнопки */
-        .btn-gold {
-            background-color: var(--gold);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-gold:hover {
-            background-color: #c19b2c;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            color: white;
-        }
-        
+
         /* Сертификаты */
         .certificates {
             background-color: white;
@@ -282,23 +264,15 @@
         /* Контакты */
         .contacts {
             background-color: var(--powder);
+            
         }
         
         .social-links a {
-            display: inline-block;
-            margin-right: 15px;
-            padding: 10px 25px;
-            background-color: white;
-            color: var(--dark-text);
             text-decoration: none;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            color: var(--dark-text);
         }
         
         .social-links a:hover {
-            background-color: var(--gold);
-            color: white;
             transform: translateY(-3px);
         }
         
@@ -326,6 +300,59 @@
             transform: translateY(0);
         }
         
+        /* Стили для всех кнопок с фоновой картинкой */
+        .btn-gold {
+            background-image: url('./img/button.svg');
+            background-size: 100% 100%; /* Растягиваем точно по размерам кнопки */
+            background-position: center;
+            background-repeat: no-repeat;
+            border: none;
+            color: var(--dark-text);
+            font-weight: bold;
+            padding: 20px 40px;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+
+            font-size: 1.5rem;
+            font-family: "RR";
+            /* Важно: делаем кнопку ресайзабельной */
+            height: 20vh; /* Заменил vh на px */
+            width: 20vw; /* Заменил vh на px */
+            width: auto; /* Ширина по содержимому */
+        }
+        
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            color: white;
+        }
+        
+        .btn-gold:active {
+            transform: translateY(0);
+        }
+        
+        .btn-gold::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .btn-gold:hover::before {
+            opacity: 1;
+        }
+        
+
         /* Адаптация для мобильных */
         @media (max-width: 768px) {
             .top-gradient {

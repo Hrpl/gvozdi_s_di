@@ -121,7 +121,7 @@
                                 </div>
                             </div>
                             
-                            <button class="btn btn-gold mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Гвоздестояние">Записаться</button>
+                            <button class="btn btn-gold mt-3 align-items-center" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Гвоздестояние">Записаться</button>
                         </div>
                     </div>
                 </div>
@@ -209,7 +209,7 @@
                                 </div>
                             </div>
                             
-                            <button class="btn btn-gold mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Контактный массаж тибетскими чашами">Записаться</button>
+                            <button class="btn btn-gold mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Вибрационные ванны тибетскими чашами">Записаться</button>
                         </div>
                     </div>
                 </div>
@@ -257,7 +257,7 @@
                                 </div>
                             </div>
                             
-                            <button class="btn btn-gold mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Контактный массаж тибетскими чашами">Записаться</button>
+                            <button class="btn btn-gold mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Sound healing">Записаться</button>
                         </div>
                     </div>
                 </div>
@@ -268,14 +268,14 @@
     <!-- Блок "Сертификаты" -->
     <section class="certificates section-padding">
         <div class="container">
-            <div class="certificate-content">
+            <div class="certificate-content text-center"> <!-- Добавлен text-center -->
                 <h2 class="mb-4 fade-in">Подарочные сертификаты</h2>
                 <div class="fade-in">
                     <p>Подарите близкому человеку шанс услышать себя, почувствовать заботу и сделать первый шаг к новому состоянию — к новой жизни, к внутренней силе и гармонии.</p>
                     <p>Наши подарочные сертификаты — это больше, чем подарок. Это приглашение на практику, которая помогает восстановить силы, открыть сердце и почувствовать радость жизни.</p>
                     <p>Можно выбрать бумажный или электронный вариант — так, чтобы подарок стал личным, значимым и красивым. Пусть этот подарок станет заботой о любимом человеке, который нуждается в моменте отдыха, тишины и внутренней гармонии.</p>
                 </div>
-                <button class="btn btn-gold mt-4 fade-in" data-bs-toggle="modal" data-bs-target="#certificateModal">Оформить сертификат</button>
+                <button class="btn btn-gold fade-in mx-auto d-block" data-bs-toggle="modal" data-bs-target="#certificateModal">Оформить сертификат</button>
             </div>
         </div>
     </section>
@@ -284,15 +284,15 @@
     <section class="contacts section-padding">
         <div class="container">
             <h2 class="text-center mb-5 fade-in">Контакты</h2>
-            <div class="row justify-content-center"> <!-- Добавлен justify-content-center -->
-                <div class="col-md-8 col-lg-6"> <!-- Уменьшена ширина колонки -->
-                    <div class="text-center fade-in"> <!-- Добавлен text-center -->
-                        <div class="social-links mt-4 justify-content-center"> <!-- Добавлен justify-content-center -->
-                            <a href="https://t.me/gvozdi_s_di" target="_blank">Telegram</a>
-                            <a href="https://www.instagram.com/gvozdi_s_di?igsh=MTczNW1kbzg5andzOA==" target="_blank">Instagram</a>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="text-center fade-in">
+                        <div class="social-links ">
+                            <a class="btn-gold" href="https://t.me/gvozdi_s_di" target="_blank">Telegram</a>
+                            <a class="btn-gold" href="https://www.instagram.com/gvozdi_s_di?igsh=MTczNW1kbzg5andzOA==" target="_blank">Instagram</a>
                         </div>
                     </div>
-                    <div class="text-center fade-in mt-5"> <!-- Добавлен text-center и отступ -->
+                    <div class="text-center fade-in mt-5">
                         <h3>Адрес</h3>
                         <p>Кулакова 12В, Бизнес-центр Вершина</p>
                         <a href="https://go.2gis.com/9Xjg6" target="_blank" class="map-link">Посмотреть на карте</a>
@@ -329,23 +329,6 @@
                 <div class="modal-body">
                     <p>Для оформления подарочного сертификата свяжитесь со мной через Telegram:</p>
                     <a href="https://t.me/gvozdi_s_di" class="btn btn-gold w-100" target="_blank">Написать в Telegram</a>
-                    <!-- <p class="mt-3 text-center">Или оставьте заявку:</p> -->
-                    <!-- <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Ваше имя" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Ваш email" required>
-                        </div>
-                        <div class="mb-3">
-                            <select class="form-select" required>
-                                <option value="" disabled selected>Выберите тип сертификата</option>
-                                <option value="electronic">Электронный сертификат</option>
-                                <option value="paper">Бумажный сертификат</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-gold w-100">Отправить заявку</button>
-                    </form> -->
                 </div>
             </div>
         </div>
@@ -355,7 +338,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        // Анимация появления элементов при скролле
         document.addEventListener('DOMContentLoaded', function() {
             const fadeElements = document.querySelectorAll('.fade-in');
             
@@ -370,13 +352,10 @@
                 });
             };
             
-            // Запускаем при загрузке
             fadeInOnScroll();
             
-            // И при скролле
             window.addEventListener('scroll', fadeInOnScroll);
             
-            // Обработчик для модального окна записи
             const bookingModal = document.getElementById('bookingModal');
             if (bookingModal) {
                 bookingModal.addEventListener('show.bs.modal', function(event) {
