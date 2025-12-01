@@ -31,6 +31,10 @@
         .redmark-font {
             font-family: "AT", serif;
         }
+
+        .bold-text {
+            font-weight: 600;
+        }
         
         h1, h2, h3, h4, h5 {
             color: var(--dark-text);
@@ -319,7 +323,7 @@
             overflow: hidden;
 
             font-size: 1.5rem;
-            font-family: "RR";
+            font-family: "AT";
             /* Важно: делаем кнопку ресайзабельной */
             height: 20vh; /* Заменил vh на px */
             width: 20vw; /* Заменил vh на px */
