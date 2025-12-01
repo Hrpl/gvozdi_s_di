@@ -281,6 +281,10 @@
             margin: 0 auto;
         }
         
+        .wrap-balance {
+            text-wrap: balance;
+        }
+
         /* Контакты */
         .contacts {
             background-color: var(--powder);
@@ -329,7 +333,8 @@
             border: none;
             color: var(--dark-text);
             font-weight: bold;
-            padding: 20px 40px;
+            padding: 40px 80px;
+            padding-right: 90px;
             min-height: 70px;
             display: flex;
             align-items: center;
@@ -338,11 +343,11 @@
             position: relative;
             overflow: hidden;
 
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             font-family: "AT";
             /* Важно: делаем кнопку ресайзабельной */
             height: 20vh; /* Заменил vh на px */
-            width: 20vw; /* Заменил vh на px */
+            width: 30vw; /* Заменил vh на px */
             width: auto; /* Ширина по содержимому */
         }
         
