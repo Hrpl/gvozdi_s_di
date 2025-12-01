@@ -283,12 +283,13 @@
         
         .wrap-balance {
             text-wrap: balance;
+          
         }
 
         /* Контакты */
         .contacts {
             background-color: var(--powder);
-            
+            overflow-wrap: break-word;
         }
         
         .social-links a {
