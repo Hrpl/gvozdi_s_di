@@ -334,7 +334,7 @@
             color: var(--dark-text);
             font-weight: bold;
             padding: 40px 80px;
-            padding-right: 90px;
+            padding-right: 110px;
             min-height: 70px;
             display: flex;
             align-items: center;
@@ -387,7 +387,7 @@
             }
             
             .hero-title {
-                font-size: 4rem;
+                font-size: 3.5rem;
                 font-weight: 100;
             }
             
