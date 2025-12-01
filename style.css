@@ -334,7 +334,7 @@
             border: none;
             color: var(--dark-text);
             font-weight: bold;
-            padding: 40px 80px;
+            padding: 40px 82px;
             padding-right: 100px;
             min-height: 70px;
             display: flex;
@@ -348,7 +348,7 @@
             font-family: "AT";
             /* Важно: делаем кнопку ресайзабельной */
             height: 20vh; /* Заменил vh на px */
-            width: 30vw; /* Заменил vh на px */
+            width: 31vw; /* Заменил vh на px */
             width: auto; /* Ширина по содержимому */
         }
         
