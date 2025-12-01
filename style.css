@@ -61,7 +61,7 @@
             background: black;
             display: flex;
             align-items: flex-end; /* Текст внизу блока */
-            padding-bottom: 30px; /* Отступ от низа */
+            padding-bottom: 0px; /* Отступ от низа */
             z-index: 3;
             position: relative;
         }
@@ -93,7 +93,7 @@
 
         .hero-content {
             width: 100%;
-            padding-top: 10vh;
+            padding-top: 13vh;
             padding-left: 2vh;
             text-align: start;
             align-self: start;
@@ -102,7 +102,7 @@
         .hero-title {
             font-weight: 600;
             color: var(--ivory);
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 0.5rem;
         }
 
@@ -115,7 +115,7 @@
 
         .citat {
             margin-left: 1.5rem;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
         }
 
         /* Блок "Со мной" */
@@ -332,8 +332,6 @@
         
         .btn-gold:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            color: white;
         }
         
         .btn-gold:active {
@@ -368,7 +366,7 @@
             }
             
             .hero-title {
-                font-size: 3.1rem;
+                font-size: 2.5rem;
             }
             
             .hero-subtitle {
