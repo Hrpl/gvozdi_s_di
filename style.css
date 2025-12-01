@@ -14,6 +14,11 @@
   src: url('fonts/ArsenicaTrial-Light.ttf') format('truetype'); /* Путь к файлу шрифта */
 }
 
+@font-face {
+  font-family: 'Century Gothic'; /* Название, которое вы будете использовать */
+  src: url('fonts/centurygothic.ttf') format('truetype'); /* Путь к файлу шрифта */
+}
+
         :root {
             --ivory: #f8f4e9;
             --powder: #e8dcd1;
@@ -114,6 +119,8 @@
         }
 
         .citat {
+            font-family: 'AT';
+            font-weight: 500;
             margin-left: 1.5rem;
             font-size: 1.1rem;
         }
@@ -126,7 +133,7 @@
         .narrow-image {
             width: 100%;
             max-width: 100%;
-            height: 20vh;
+            height: 25vh;
             object-fit: cover;
             object-position: center;
             margin: 0 auto;
@@ -142,7 +149,7 @@
 
         .image-title-overlay {
             position: absolute;
-            bottom: -36%;
+            bottom: -12.5vh;
             left: 0%;
             transform: translate(-50%, 50%); /* Центрируем и поднимаем на половину высоты текста */
             text-align: center;
